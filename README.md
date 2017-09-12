@@ -13,10 +13,14 @@ Abaixo você encontrará uma lista detalhada do material presente neste reposit�
 
 ### Consumindo uma Aplicação REST
 
-1. [AngularJS: Introdução](./AngularJS/01_introducao.pdf)
-1. [AngularJS: DataBinding](./AngularJS/02_data-binding.pdf)
+1. [AngularJS: Introdução](./AngularJS/01_angular-intro.pdf)
+1. [AngularJS: DataBinding](./AngularJS/02_angular-data-binding.pdf)
 1. [AngularJS: Controllers](./AngularJS/03_angular-controllers.pdf)
-1. [AngularJS: O elemento $http](./AngularJS/04_angular_http.pdf)
+1. [AngularJS: Services](./AngularJS/04_angular-services.pdf)
+1. [AngularJS: Filtros](./AngularJS/05_angular-filtros.pdf)
+1. [AngularJS: Forms](./AngularJS/06_angular-forms.pdf)
+1. [AngularJS: O elemento $http](./AngularJS/07_angular-http.pdf)
+1. [AngularJS: Rotas](./AngularJS/08_angular-rotas.pdf)
 
 ### Criando sua própria Aplicação REST
 
