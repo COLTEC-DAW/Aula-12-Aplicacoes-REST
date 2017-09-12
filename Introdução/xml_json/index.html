@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>XML & JSON</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="libs/shower/themes/bright/styles/screen.css">
+  <link rel="stylesheet" href="libs/highlight/styles/default.css">
+  <link rel="stylesheet" type="text/css" href="css/960gs.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <style media="screen">
+    img {
+      max-width: 100%;
+    }
+  </style>
+
+  </head>
+  <body class="list">
+    <header class="caption">
+      <h1>XML & JSON</h1>
+      <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+    </header>
+
+
+    <section class="slide cover" id="Cover">
+      <div>
+        <h2>XML & JSON</h2>
+        <p>João Eduardo Montandon</p>
+        <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+        <img src="images/wallpaper_coltec_wide.png" alt="" />
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Introdução</h2>
+        <p>O armazenamento via Banco de Dados requer estrutura robusta e consolidada para funcionar</p>
+        <p>Nem sempre tal estrutura estará disponível para uso no desenvolvimento do seu sistema</p>
+        <p>Exemplos: Sistemas embarcados, dispositivos móveis, etc..</p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Introdução</h2>
+        <p><em>Como implementar uma forma eficiente de armazenamento dos dados??</em></p>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <h2>Introdução</h2>
+        <p><em>Como implementar uma forma eficiente de armazenamento dos dados??</em></p>
+        <div class="grid_3 suffix_1 ">
+          <img src="images/JSON_vector_logo.svg.png" alt="">
+          <p style="text-align: center"><b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</p>
+        </div>
+        <div class="grid_5 suffix_1 prefix_2">
+          <img src="images/2000px-Xml_logo.svg.png" alt="">
+          <p style="text-align: center">e<b>X</b>tensible <b>M</b>arkup <b>L</b>anguage</p>
+        </div>
+      </div>
+    </section>
+    <section class="slide section">
+      <div>
+        <h2>A Linguagem XML</h2>  
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>O que é?</h2>
+        <p>e<b>X</b>tensible <b>M</b>arkup <b>L</b>anguage</p>
+        <p><b>Linguagem</b> para marcação de dados voltada para armazenamento e transferência de informações</p>
+        <p>Recomendada pela W3C: 1999</p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>XML: Características</h2>
+        <ul>
+          <li>Sintaxe auto-descritiva</li>
+          <li>Extensível</li>
+          <li>Dados são representados em formato hierárquico</li>
+          <li>Linguagem de Marcação</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>XML: Exemplo</h2>
+        <pre>
+          <code>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;note>
+  &lt;to>Tove&lt;/to>
+  &lt;from>Jani&lt;/from>
+  &lt;heading>Reminder&lt;/heading>
+  &lt;body>Don't forget me this weekend!&lt;/body>
+&lt;/note></code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>XML: Estrutura</h2>
+          <img style="display: block; margin-left: auto; margin-right: auto" src="images/xml_tree.gif" alt="">
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>XML: Estrutura</h2>
+        <ol>
+          <li>Presença de um elemento raiz</li>
+          <li>Qualquer elemento pode ter filhos</li>
+          <li>Todo elemento tem um pai (exceto o raiz)</li>
+          <li>Relação se dá pela hierarquia entre os elementos (parent, child, sibling, etc..)</li>
+          <li>Elementos podem ter atributos</li>
+        </ol>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <div class="grid_6">
+          <pre>
+            <code style="font-size: 0.5em">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;bookstore>
+  &lt;book category="cooking">
+    &lt;title lang="en">Everyday Italian&lt;/title>
+    &lt;author>Giada De Laurentiis&lt;/author>
+    &lt;year>2005&lt;/year>
+    &lt;price>30.00&lt;/price>
+  &lt;/book>
+  &lt;book category="children">
+    &lt;title lang="en">Harry Potter&lt;/title>
+    &lt;author>J K. Rowling&lt;/author>
+    &lt;year>2005&lt;/year>
+    &lt;price>29.99&lt;/price>
+  &lt;/book>
+  &lt;book category="web">
+    &lt;title lang="en">Learning XML&lt;/title>
+    &lt;author>Erik T. Ray&lt;/author>
+    &lt;year>2003&lt;/year>
+    &lt;price>39.95&lt;/price>
+  &lt;/book>
+&lt;/bookstore></code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <p>O que esse arquivo armazena?</p>
+          <p>Qual elemento raiz?</p>
+          <p>Quantos filhos ele possui?</p>
+          <p>Quais são seus atributos?</p>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>XML: O Elemento</h2>
+        <p>O elemento define a instância de uma informação armazenada no XML</p>
+        <p>Pode ser primitivo ou composto de outros elementos</p>
+        <p>São <em>case sensitive</em></p>
+        <p>Podem possuir atributos com informações extras</p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>XML: O Atributo</h2>
+        <p>Projetos para fornecer dados de um elemento</p>
+        <p>Devem ser declarados entre aspas</p>
+        <p>Não podem conter múltiplos valores</p>
+        <p>Não podem ser hierarquizados</p>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <h2>XML: Atributos vs Elementos</h2>
+        <div class="grid_12">
+          <p>Qual é a melhor opção?</p>
+        </div>
+        <div class="grid_4">
+          <pre style="font-size: 0.7em">
+            <code>&lt;note date="2008-01-10">
+  &lt;to>Tove&lt;/to>
+  &lt;from>Jani&lt;/from>
+&lt;/note></code>
+          </pre>
+        </div>
+        <div class="grid_4">
+          <pre style="font-size: 0.7em">
+            <code>&lt;note>
+  &lt;date>2008-01-10&lt;/date>
+  &lt;to>Tove&lt;/to>
+  &lt;from>Jani&lt;/from>
+&lt;/note></code>
+          </pre>
+        </div>
+        <div class="grid_4">
+          <pre style="font-size: 0.7em">
+            <code>&lt;note>
+  &lt;date>
+    &lt;year>2008&lt;/year>
+    &lt;month>01&lt;/month>
+    &lt;day>10&lt;/day>
+  &lt;/date>
+  &lt;to>Tove&lt;/to>
+  &lt;from>Jani&lt;/from>
+&lt;/note></code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="slide section">
+      <div>
+        <h2>Formato JSON</h2>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>O que é?</h2>
+        <p><b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</p>
+        <p>Formato para armazenamento e transferência de informações</p>
+        <p>Especificado Originalmente por Douglas Crockford. Depois definido formalmente na <a href="https://tools.ietf.org/html/rfc7159">RFC-7159</a></p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Principais Características</h2>
+        <p>Representação baseada na sintaxe de objetos em JavaScript</p>
+        <p>Fácil legibilidade, pouco verboso (extremamente leve)</p>
+        <p>Fácil navegação entre as informações presentes na estrutura (diferentemente do DOM em XML)</p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Exemplo</h2>
+        <pre style="font-size: 0.9em">
+          <code>{
+  "note": {
+    "to": "Tove",
+    "from": "Jani",
+    "heading": "Reminder",
+    "body": "Don't forget me this weekend!"
+  }
+}</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Estrutura</h2>
+        <img style="display: block; margin-left: auto; margin-right: auto" src="images/json_structure.jpg" alt="">
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Estrutura</h2>
+        <ol>
+          <li>Dados são passados no formato de tuplas</li>
+          <li>Dados são separados por vírgula</li>
+          <li>Os valores podem ser compostos por strings, números, booleanos, vetores ou outros objetos</li>
+          <li>Possui as mesmas propriedades hierárquicas do XML</li>
+        </ol>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Estrutura</h2>
+        <ol>
+          <li>Dados são passados no formato de tuplas</li>
+          <li>Dados são separados por vírgula</li>
+          <li>Os valores podem ser compostos por strings, números, booleanos, vetores ou outros objetos</li>
+          <li>Possui as mesmas propriedades hierárquicas do XML</li>
+        </ol>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12" style="font-size: 0.65em">
+      <div class="grid_6">
+        <pre>
+          <code>{
+  "bookstore": {
+    "book": [
+      {
+        "category": "cooking",
+        "title": {
+          "lang": "en",
+          "text": "Everyday Italian"
+        },
+        "price": 30.00
+      },
+      {
+        "category": "children",
+</code>
+        </pre>
+      </div>
+      <div class="grid_6">
+        <pre>
+          <code>        "title": {
+          "lang": "en",
+          "text": "Harry Potter"
+        },
+        "price": 29.99
+      },
+      {
+        "category": "web",
+        "title": {
+          "lang": "en",
+          "text": "Learning XML"
+        },
+        "price": 39.95
+      }
+    ]
+  }
+}</code>
+        </pre>
+      </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Object</h2>
+        <p>Conjunto desodernado de informações, fornecidas no formato par/valor</p>
+        <p>Sintaxe: <code>{ nome: valor }, { nome: valor }, ....</code></p>
+        <img style="display: block; margin-left: auto; margin-right: auto" src="images/object.gif" alt="">
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Array</h2>
+        <p>Conjunto ordernado de valores</p>
+        <p>Sintaxe: <code>[ val1, val2, val3, ..., valN ]</code></p>
+        <img style="display: block; margin-left: auto; margin-right: auto" src="images/array.gif" alt="">
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Valores</h2>
+        <p>O formato JSON prevê suporte aos seguintes tipos:</p>
+        <div class="container_12">
+          <div class="grid_5">
+            <ul>
+              <li>string</li>
+              <li>numéricos</li>
+              <li>objetos</li>
+              <li>arrays</li>
+              <li>booleanos (true e false)</li>
+              <li>null</li>
+            </ul>
+          </div>
+          <div class="grid_7">
+            <img style="display: block; margin-left: auto; margin-right: auto" src="images/value.gif" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide section">
+      <div>
+        <h2>XML & JSON</h2>
+        <p>Considerações Finais</p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>XML & JSON: Considerações Finais</h2>
+        <p>XML e JSON proveem um padrão consolidado tanto para armazenamento quanto para envio de dados</p>
+        <p>Ambos organizam os dados de forma hierárquica</p>
+        <p>Qual deles é melhor? <span class="note"><a href="http://www.yegor256.com/2015/11/16/json-vs-xml.html">Stop Comparing JSON and XML</a></span></p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Referências</h2>
+        <p><a href="http://www.w3schools.com/xml/">w3schools: XML</a></p>
+        <p><a href="http://www.w3schools.com/json/">w3schools: JSON</a></p>
+        <p><a href="http://json.org/json-pt.html">json.org</a></p>
+      </div>
+    </section>
+
+    <p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+    <!-- Barra de progresso, comente se deseja remover da apresentação -->
+    <div class="progress"><div></div></div>
+    <script src="libs/shower/shower.min.js"></script>
+    <script src="libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
